@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2-Footprint</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CO2-Footprint von Ländern und Unternehmen</h1>
+        <nav>
+            <ul>
+                <li><a href="/Home/home.html">Home</a>
+                <li><a href="#emissionen">CO2-Emissionen</a></li>
+                <li><a href="/CO2-Reduktion/CO2-Reduktion.html">CO2-Reduktion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Willkommen auf der Seite</h1>
+
+
+
+
+
+
+        <section id="emissionen">
+            <h2>CO2-Emissionen</h2>
+            <label for="filter">Filter nach Land/Unternehmen:</label>
+            <input type="text" id="filter" placeholder="Suchen..." onkeyup="filterTable()">
+
+            <table id="co2Table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Land</th>
+                        <th onclick="sortTable(1)">Unternehmen</th>
+                        <th onclick="sortTable(2)">CO2-Emissionen (Tonnen)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>Unternehmen A</td>
+                        <td>150.000</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>Unternehmen B</td>
+                        <td>500.000</td>
+                    </tr>
+                    <tr>
+                        <td>China</td>
+                        <td>Unternehmen C</td>
+                        <td>1.200.000</td>
+                    </tr>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>Unternehmen D</td>
+                        <td>250.000</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>Unternehmen E</td>
+                        <td>300.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CO2-Footprint Webseite. Alle Rechte vorbehalten.</p>
+        <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

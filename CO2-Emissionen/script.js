@@ -62,3 +62,4 @@ function filterTable() {
 document.getElementById("filter").addEventListener("input", function() {
     this.value = this.value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 });
+

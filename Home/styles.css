@@ -1,28 +1,159 @@
 /* Grundlegendes Layout */
-body {
+html, body {
     font-family: Arial, sans-serif;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
     margin: 0;
-    padding: 0;
+     
+    
+   
+}
+body { 
+    background-image: url(/img/background.png);
+    background-size: cover; /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
+    background-position: center; /* Zentriert das Hintergrundbild */
+    background-attachment: fixed; /* Fixiert den Hintergrund beim Scrollen */
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: rgba(0, 0, 0, 0);
     color: white;
-    padding: 10px;
+    padding: 1px;
     text-align: center;
+    
+
+
 }
+/*Logo der Webseite */
+
+.logo-container {
+    position: absolute; /* Positioniert das Logo relativ zum Header */
+    top: 20px; /* Abstand vom oberen Rand */
+    left: 20px; /* Abstand vom linken Rand */
+    
+}
+
+.logo {
+    height: 100px; /* Höhe des Logos anpassen */
+    width: auto; /* Automatische Breite, um das Seitenverhältnis beizubehalten */
+    max-width: 100%; /* Maximale Breite von 100%, um das Logo responsiv zu machen */
+    
+}
+@media (max-width: 768px) {
+    .logo-container {
+        position: static; /* Ändert die Positionierung auf static für mobile Geräte */
+        text-align: center; /* Zentriert das Logo in der Mitte */
+        margin: 10px 0; /* Fügt oben und unten etwas Abstand hinzu */
+    }
+
+    .logo {
+        height: 100px; /* Reduziert die Logo-Höhe auf mobilen Geräten */
+    }
+
+    .site-title {
+        font-size: 2em; /* Verkleinert die Titelgröße für mobile Geräte */
+        margin-top: 10px; /* Fügt oben etwas Abstand hinzu */
+    }
+}
+
+.site-title {
+    font-size: 1,5em; /* Titelgröße */
+    font-weight: bold; /* Titel fett */
+    margin: 0; /* Kein Margin, um den Platz optimal zu nutzen */
+    text-align: center; /* Zentriert den Titel */
+    color: #000000; /* Farbe des Titels */
+}
+
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
+/* Navigation Buttons */
+.global-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.global-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.global-nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Button-Hintergrundfarbe */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px; /* Abgerundete Ecken */
+    transition: background-color 0.3s ease;
+}
+
+.global-nav ul li a:hover {
+    background-color: #45a049; /* Button-Farbe beim Hover */
+    text-decoration: none; /* Entfernt die Unterstreichung beim Hover */
+}
+
+.global-nav ul li a:active {
+    background-color: #3e8e41; /* Button-Farbe beim Drücken */
+}
+@media (max-width: 768px) {
+    .global-nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .global-nav ul li a {
+        width: 80%; /* Macht die Buttons breiter auf mobilen Geräten */
+    }
+}
+/* Standard (LTR) - Menü auf der linken Seite */
+.local-nav {
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* Menü-Elemente Styling */
+.local-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.local-nav ul li {
+    margin: 10px 0;
+}
+
+.local-nav ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #333;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.local-nav ul li a:hover {
+    background-color: #b2ebf2;
+}
+
 
 main {
+    flex: 1;
     padding: 20px;
 }
 
@@ -32,7 +163,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 th, td {
@@ -52,10 +183,84 @@ input[type="text"] {
 }
 
 footer {
-    background-color: #f1f1f1;
+    background-color: #adb701;
     text-align: center;
     padding: 10px;
-    position: absolute;
     width: 100%;
+    position: relative;
     bottom: 0;
+   
+  
+}
+#intro {
+   
+    padding: 40px; /* Mehr Platz innerhalb der Sektion */
+    font-size: 1.2em; /* Text leicht vergrößern */
+    margin: 10px 0; /* Platz über und unter der Sektion */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
+    color: rgb(0, 0, 0);
+    background-color: #fff9c4;
+}
+
+#intro h2 {
+    font-size: 2em; /* Vergrößert die Überschrift */
+    margin-bottom: 10px; /* Abstand zwischen der Überschrift und dem Text */
+    color: #f57f17;
+}
+
+#intro p {
+    line-height: 1.6; /* Bessere Lesbarkeit durch größeren Zeilenabstand */
+    font-size: 1.2em; /* Erhöht die Schriftgröße des Paragraphen */
+}
+/* Styling für den Tipps-Bereich */
+#ziel {
+    background-color: #ffebee; /* Hintergrundfarbe für Ziel */
+    padding: 40px;
+    font-size: 1.2em;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+#ziel h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #d32f2f; /* Überschriftfarbe für Ziel */
+}
+
+#ziel p {
+    line-height: 1.6;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+/* Styling für den funktionen-Bereich */
+#funktionen {
+    background-color: #e8f5e9; /* Hintergrundfarbe für funktionen */
+    padding: 40px;
+    font-size: 1.2em;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+#funktionen h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #388e3c; /* Überschriftfarbe für funktionen */
+}
+
+#funktionen ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #000000;
+}
+
+#funktionen li {
+    line-height: 1.6;
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }

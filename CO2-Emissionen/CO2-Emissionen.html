@@ -8,29 +8,36 @@
 </head>
 <body>
     <header>
-        <h1>CO2-Footprint von Ländern und Unternehmen</h1>
-        <nav>
+        <h1 class="site-title">CO2-Footprint von Ländern und Unternehmen</h1>
+
+        <div class="logo-container">
+            <img src="/img/LogoNoBackground.png" alt="Webseite Logo" class="logo">
+         </div>
+
+        <nav class="global-nav">
             <ul>
-                <li><a href="/Home/home.html">Home</a>
-                <li><a href="#emissionen">CO2-Emissionen</a></li>
+                <li><a href="/Home/home.html">Home</a></li>
+                <li><a href="/CO2-Emissionen/CO2-Emissionen.html">CO2-Emissionen</a></li>
                 <li><a href="/CO2-Reduktion/CO2-Reduktion.html">CO2-Reduktion</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h1>Willkommen auf der Seite</h1>
-
-
+        
+<!-- Suchleiste -->
+<div class="search-container">
+    
+    <input type="text" id="filter" placeholder="Suchen..." onkeyup="filterTable()">
+</div>
 
 
 
 
         <section id="emissionen">
-            <h2>CO2-Emissionen</h2>
-            <label for="filter">Filter nach Land/Unternehmen:</label>
-            <input type="text" id="filter" placeholder="Suchen..." onkeyup="filterTable()">
+            
+            
+            
 
             <table id="co2Table">
                 <thead>
@@ -38,6 +45,7 @@
                         <th onclick="sortTable(0)">Land</th>
                         <th onclick="sortTable(1)">Unternehmen</th>
                         <th onclick="sortTable(2)">CO2-Emissionen (Tonnen)</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -74,8 +82,11 @@
     <footer>
         <p>&copy; 2024 CO2-Footprint Webseite. Alle Rechte vorbehalten.</p>
         <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+       
     </footer>
 
     <script src="script.js"></script>
+
+   
 </body>
 </html>

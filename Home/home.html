@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,29 @@
 </head>
 <body>
     <header>
-        <h1>Willkommen auf der CO2-Footprint Webseite</h1>
-        <nav>
+    
+    <h1 class="site-title">Willkommen auf der CO2-Footprint Webseite</h1>
+
+         <div class="logo-container">
+           <img src="/img/LogoNoBackground.png" alt="Webseite Logo" class="logo">
+        </logo-container>
+    
+    </div>
+
+        <nav class="global-nav">
             <ul>
                 <li><a href="/Home/home.html">Home</a></li>
                 <li><a href="/CO2-Emissionen/CO2-Emissionen.html">CO2-Emissionen</a></li>
                 <li><a href="/CO2-Reduktion/CO2-Reduktion.html">CO2-Reduktion</a></li>
+                
             </ul>
         </nav>
+        
     </header>
-
+    
+    
     <main>
+
         <section id="intro">
             <h2>Über das Projekt</h2>
             <p>
@@ -45,11 +57,22 @@
                 <li>Informationen zur Reduzierung des CO2-Fußabdrucks</li>
             </ul>
         </section>
+        <nav class="local-nav">
+            <ul>
+                <li><a href="#intro">Über das Projekt</a></li>
+                <li><a href="#ziel">Unser Ziel</a></li>
+                <li><a href="#funktionen">Funktionen der Webseite</a></li>
+            </ul>
+            
+        </nav>
+
+        
     </main>
 
     <footer>
         <p>&copy; 2024 CO2-Footprint Webseite. Alle Rechte vorbehalten.</p>
         <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+        
     </footer>
 </body>
 </html>

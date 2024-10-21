@@ -1,236 +1,229 @@
 /* Grundlegendes Layout */
-html, body {
-    font-family: Arial, sans-serif;
-    height: 100%;
-    flex-direction: column;
-    display: flex;
-    margin: 0;
-     
-    
-   
+html,
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  margin: 0;
 }
-body { 
-    background-image: url(/img/world-1301744_1280.png);
-    background-size: cover; /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
-    background-position: center; /* Zentriert das Hintergrundbild */
-    background-attachment: fixed; /* Fixiert den Hintergrund beim Scrollen */
-    
+body {
+  background-image: url(/img/world-1301744_1280.png);
+  background-size: cover; /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
+  background-position: center; /* Zentriert das Hintergrundbild */
+  background-attachment: fixed; /* Fixiert den Hintergrund beim Scrollen */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0); /* Transparente Hintergrundfarbe */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    
-    
-
-
+  background-color: rgba(0, 0, 0, 0); /* Transparente Hintergrundfarbe */
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 /*Logo der Webseite */
 
 .logo-container {
-    position: absolute; /* Positioniert das Logo relativ zum Header */
-    top: 20px; /* Abstand vom oberen Rand */
-    left: 20px; /* Abstand vom linken Rand */
-    
+  position: absolute; /* Positioniert das Logo relativ zum Header */
+  top: 20px; /* Abstand vom oberen Rand */
+  left: 20px; /* Abstand vom linken Rand */
 }
 
 .logo {
-    height: 100px; /* Höhe des Logos anpassen */
-    width: auto; /* Automatische Breite, um das Seitenverhältnis beizubehalten */
-    max-width: 100%; /* Maximale Breite von 100%, um das Logo responsiv zu machen */
-    
+  height: 100px; /* Höhe des Logos anpassen */
+  width: auto; /* Automatische Breite, um das Seitenverhältnis beizubehalten */
+  max-width: 100%; /* Maximale Breite von 100%, um das Logo responsiv zu machen */
 }
 @media (max-width: 768px) {
-    .logo-container {
-        position: static; /* Ändert die Positionierung auf static für mobile Geräte */
-        text-align: center; /* Zentriert das Logo in der Mitte */
-        margin: 10px 0; /* Fügt oben und unten etwas Abstand hinzu */
-    }
+  .logo-container {
+    position: static; /* Ändert die Positionierung auf static für mobile Geräte */
+    text-align: center; /* Zentriert das Logo in der Mitte */
+    margin: 10px 0; /* Fügt oben und unten etwas Abstand hinzu */
+  }
 
-    .logo {
-        height: 100px; /* Reduziert die Logo-Höhe auf mobilen Geräten */
-    }
+  .logo {
+    height: 100px; /* Reduziert die Logo-Höhe auf mobilen Geräten */
+  }
 
-    .site-title {
-        font-size: 2em; /* Verkleinert die Titelgröße für mobile Geräte */
-        margin-top: 10px; /* Fügt oben etwas Abstand hinzu */
-    }
+  .site-title {
+    font-size: 2em; /* Verkleinert die Titelgröße für mobile Geräte */
+    margin-top: 10px; /* Fügt oben etwas Abstand hinzu */
+  }
 }
 
 .site-title {
-    font-size: 1,5em; /* Titelgröße */
-    font-weight: bold; /* Titel fett */
-    margin: 0; /* Kein Margin, um den Platz optimal zu nutzen */
-    text-align: center; /* Zentriert den Titel */
-    color: #ffffff; /* Farbe des Titels */
+  font-size: 1, 5em; /* Titelgröße */
+  font-weight: bold; /* Titel fett */
+  margin: 0; /* Kein Margin, um den Platz optimal zu nutzen */
+  text-align: center; /* Zentriert den Titel */
+  color: #ffffff; /* Farbe des Titels */
 }
 
-
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
 /* Navigation Buttons */
 .global-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .global-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .global-nav ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Button-Hintergrundfarbe */
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px; /* Abgerundete Ecken */
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50; /* Button-Hintergrundfarbe */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px; /* Abgerundete Ecken */
+  transition: background-color 0.3s ease;
 }
 
 .global-nav ul li a:hover {
-    background-color: #45a049; /* Button-Farbe beim Hover */
-    text-decoration: none; /* Entfernt die Unterstreichung beim Hover */
+  background-color: #45a049; /* Button-Farbe beim Hover */
+  text-decoration: none; /* Entfernt die Unterstreichung beim Hover */
 }
 
 .global-nav ul li a:active {
-    background-color: #3e8e41; /* Button-Farbe beim Drücken */
+  background-color: #3e8e41; /* Button-Farbe beim Drücken */
 }
 @media (max-width: 768px) {
-    .global-nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+  .global-nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
 
-    .global-nav ul li a {
-        width: 80%; /* Macht die Buttons breiter auf mobilen Geräten */
-    }
+  .global-nav ul li a {
+    width: 80%; /* Macht die Buttons breiter auf mobilen Geräten */
+  }
 }
 /* Standard (LTR) - Menü auf der linken Seite */
 .local-nav {
-    text-align: left;
-    margin-left: 20px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 /* Menü-Elemente Styling */
 .local-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .local-nav ul li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .local-nav ul li a {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #333;
-    padding: 10px;
-    background-color: #e0f7fa;
-    border-radius: 5px;
-    display: block;
-    transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #333;
+  padding: 10px;
+  background-color: #e0f7fa;
+  border-radius: 5px;
+  display: block;
+  transition: background-color 0.3s ease;
 }
 
 .local-nav ul li a:hover {
-    background-color: #b2ebf2;
+  background-color: #b2ebf2;
 }
 
-
 main {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 table {
-    width: 100%; /* Tabelle nimmt die volle Breite des Containers ein */
-    border-collapse: collapse; /* Entfernt doppelte Ränder */
-    margin: 100px 0; /* Abstand oben und unten */
-    background-color: rgba(255, 255, 255, 0.9); /* Hintergrundfarbe für die Tabelle */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten für Tiefe */
-    border-radius: 10px; /* Abgerundete Ecken für die Tabelle */
-    
+  width: 100%; /* Tabelle nimmt die volle Breite des Containers ein */
+  border-collapse: collapse; /* Entfernt doppelte Ränder */
+  margin: 100px 0; /* Abstand oben und unten */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Hintergrundfarbe für die Tabelle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten für Tiefe */
+  border-radius: 10px; /* Abgerundete Ecken für die Tabelle */
 }
 
-th, td {
-    border: 1px solid #ddd; /* Rahmen um die Zellen */
-    padding: 12px; /* Innenabstand in den Zellen */
-    text-align: left; /* Text linksbündig */
+th,
+td {
+  border: 1px solid #ddd; /* Rahmen um die Zellen */
+  padding: 12px; /* Innenabstand in den Zellen */
+  text-align: left; /* Text linksbündig */
 }
 
 th {
-    background-color: #4CAF50; /* Hintergrundfarbe für die Kopfzeile */
-    color: white; /* Schriftfarbe in der Kopfzeile */
-    font-weight: bold; /* Fettgedruckte Schrift in der Kopfzeile */
+  background-color: #4caf50; /* Hintergrundfarbe für die Kopfzeile */
+  color: white; /* Schriftfarbe in der Kopfzeile */
+  font-weight: bold; /* Fettgedruckte Schrift in der Kopfzeile */
 }
 
 tr:hover {
-    background-color: #f1f1f1; /* Hintergrundfarbe für Zeilen beim Hover */
+  background-color: #f1f1f1; /* Hintergrundfarbe für Zeilen beim Hover */
 }
 
 td {
-    background-color: #fff; /* Hintergrundfarbe für die Datenzellen */
-    transition: background-color 0.3s; /* Sanfter Übergang für Hover-Effekt */
+  background-color: #fff; /* Hintergrundfarbe für die Datenzellen */
+  transition: background-color 0.3s; /* Sanfter Übergang für Hover-Effekt */
 }
 
 td:hover {
-    background-color: #e0f7fa; /* Hintergrundfarbe beim Hover über Zellen */
+  background-color: #e0f7fa; /* Hintergrundfarbe beim Hover über Zellen */
 }
 
 input[type="text"] {
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
 }
 
 footer {
-    background-color: #adb701;
-    text-align: center;
-    padding: 0%;
-    width: 100%;
-    position: relative;
-    bottom: 0;
+  background-color: #adb701;
+  text-align: center;
+  padding: 0%;
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 .search-container {
-    display: flex; /* Verwende Flexbox für die Anordnung */
-    justify-content: center; /* Zentriert die Suchleiste */
-    margin: 20px 0; /* Abstand um die Suchleiste */
-
+  display: flex; /* Verwende Flexbox für die Anordnung */
+  justify-content: center; /* Zentriert die Suchleiste */
+  margin: 20px 0; /* Abstand um die Suchleiste */
 }
 .search-container label {
-    margin-right: 20px; /* Abstand zwischen Label und Dropdown */
-    font-weight: bold; /* Fettgedruckte Schrift für die Labels */
-    font-size: 20px;
+  margin-right: 20px; /* Abstand zwischen Label und Dropdown */
+  font-weight: bold; /* Fettgedruckte Schrift für die Labels */
+  font-size: 20px;
 }
 
 #searchInput {
-    padding: 10px; /* Innenabstand */
-    font-size: 1em; /* Schriftgröße */
-    border: 1px solid #ddd; /* Rahmenfarbe */
-    border-radius: 5px; /* Abgerundete Ecken */
-    width: 250px; /* Breite des Eingabefelds */
-    transition: border-color 0.3s; /* Übergangseffekt für Rahmenfarbe */
+  padding: 10px; /* Innenabstand */
+  font-size: 1em; /* Schriftgröße */
+  border: 1px solid #ddd; /* Rahmenfarbe */
+  border-radius: 5px; /* Abgerundete Ecken */
+  width: 250px; /* Breite des Eingabefelds */
+  transition: border-color 0.3s; /* Übergangseffekt für Rahmenfarbe */
 }
 
 #searchInput:focus {
-    border-color: #4CAF50; /* Rahmenfarbe beim Fokussieren */
-    outline: none; /* Entfernt den Standardrahmen */
+  border-color: #4caf50; /* Rahmenfarbe beim Fokussieren */
+  outline: none; /* Entfernt den Standardrahmen */
 }
